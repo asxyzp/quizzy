@@ -3,32 +3,8 @@ import DarkTheme from "./Theme/Dark";
 import Confetti from "react-confetti";
 import LightTheme from "./Theme/Light";
 import React, { useEffect, useState } from "react";
-import Container from "./Components/Custom/Container";
-import ResultCard from "./Components/Custom/ResultCard";
-import ModalRouter from "./Components/Modal/ModalRouter";
-import QuestionCard from "./Components/Custom/QuestionCard";
-import {
-  Menu as MenuIcon,
-  DarkMode,
-  LightMode,
-  Info,
-  ShortText,
-} from "@mui/icons-material";
-import {
-  Box,
-  Modal,
-  Menu,
-  MenuItem,
-  ListItemIcon,
-  ListItemText,
-  Button,
-  CssBaseline,
-  Skeleton,
-  ThemeProvider,
-  Typography,
-  IconButton,
-  useMediaQuery,
-} from "@mui/material";
+import ModalRouter from "./Components/ModalRouter";
+import { CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material";
 
 // IMPORTING API ENDPOINT
 import getQuestions from "./API/getQuestions";
@@ -39,6 +15,8 @@ import {
   modalTypeAtom,
   questionsAtom,
 } from "./Context/atoms";
+import ContainerLayout from "./Layouts/ContainerLayout/ContainerLayout";
+import LandingPage from "./Pages/LandingPage/LandingPage";
 
 /**
  * @name App
@@ -213,12 +191,13 @@ const App = (props) => {
     <ThemeProvider theme={darkMode === true ? DarkTheme : LightTheme}>
       <CssBaseline />
       <ModalRouter />
-      <Container>
+      <ContainerLayout>
         {/* SHOWING CONFETTI WHEN THE RESULT IS SHOWN */}
         {showResult === true && <Confetti />}
 
+        <LandingPage />
         {/* SHOWING MENU */}
-        {showResult === false && (
+        {/* {showResult === false && (
           <>
             <Menu
               id="app-menu"
@@ -249,15 +228,15 @@ const App = (props) => {
             </Menu>
             <IconButton
               onClick={openMenu}
-              sx={{ position: "absolute", bottom: "0px", right: "0px" }}
+              sx={{ position: "relative", bottom: "0px", right: "0px" }}
             >
               <MenuIcon sx={{ height: "35px", width: "35px" }} />
             </IconButton>
           </>
-        )}
+        )} */}
 
         {/* CONTAINS QUESTION & RESULT CARD */}
-        {questions.length > 0 ? (
+        {/* {questions.length > 0 ? (
           <>
             <Typography variant="h4" sx={{ mb: "10px" }}>
               {" "}
@@ -319,8 +298,8 @@ const App = (props) => {
           </>
         ) : (
           <Skeleton sx={{ height: "450px", width: containerWidth }} />
-        )}
-      </Container>
+        )} */}
+      </ContainerLayout>
     </ThemeProvider>
   );
 };

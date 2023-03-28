@@ -10,10 +10,10 @@ const LightTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#f77b2c",
+      main: "#404e40",
     },
     secondary: {
-      main: "#404e40",
+      main: "#f77b2c",
     },
     error: {
       main: "#f57030",

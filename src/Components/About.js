@@ -2,7 +2,7 @@
 import React from "react";
 import { Modal, Box, Typography, useMediaQuery } from "@mui/material";
 import { useRecoilState } from "recoil";
-import { modalTypeAtom } from "../../Context/atoms";
+import { modalTypeAtom } from "../Context/atoms";
 
 /**
  * @name About
@@ -44,11 +44,9 @@ const About = (props) => {
       <Box
         sx={{
           maxWidth: "400px",
-          mx: "auto",
           bgcolor: "background.paper",
-          p: "10px",
-          borderRadius: "4px",
         }}
+        className="p-10 m-auto rounded-md "
       >
         <Typography
           component="div"
@@ -66,7 +64,7 @@ const About = (props) => {
           {" "}
           Quizzy is a simple question and answer app built as a take home
           assignment for Seekho.ai by Aashish Loknath Panigrahi. The questions
-          for this Q&A app are fetched from OpenTriviaDB API.
+          for this app are fetched from OpenTriviaDB API.
         </Typography>
         <Typography
           component="div"

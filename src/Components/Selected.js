@@ -2,7 +2,7 @@
 import React from "react";
 import { Modal, Box, Typography, useMediaQuery } from "@mui/material";
 import { useRecoilState } from "recoil";
-import { modalTypeAtom, questionsAtom } from "../../Context/atoms";
+import { modalTypeAtom, questionsAtom } from "../Context/atoms";
 
 /**
  * @name Selected

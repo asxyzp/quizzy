@@ -3,7 +3,7 @@ import React from "react";
 import { Card, Typography, Box, useMediaQuery } from "@mui/material";
 import { Check, Cancel } from "@mui/icons-material";
 import { useRecoilState } from "recoil";
-import { questionsAtom } from "../../Context/atoms";
+import { questionsAtom } from "../Context/atoms";
 
 /**
  * @name ResultCard

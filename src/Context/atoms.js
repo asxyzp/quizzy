@@ -11,7 +11,7 @@ export const questionsAtom = atom({
 // STORES DARK MODE STATE
 export const darkModeAtom = atom({
   key: "darkMode",
-  default: true,
+  default: false,
 });
 
 // STORES MODAL TYPE STATE

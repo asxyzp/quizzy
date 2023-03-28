@@ -12,7 +12,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { useRecoilState } from "recoil";
-import { currentQuestionAtom, questionsAtom } from "../../Context/atoms";
+import { currentQuestionAtom, questionsAtom } from "../Context/atoms";
 
 // COMPONENTS
 /**

@@ -3,7 +3,7 @@ import React from "react";
 import About from "./About";
 import Splash from "./Splash";
 import Selected from "./Selected";
-import { modalTypeAtom } from "../../Context/atoms";
+import { modalTypeAtom } from "../Context/atoms";
 import { useRecoilState } from "recoil";
 
 /**
